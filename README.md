@@ -1,19 +1,16 @@
 # StudyCorgi_Tests
 **** TestPlan
 
-Login feature
+## Test Plan
 
-- Login Succesfully
-- Reset Password
-- Validate that I can not register an account that already exists
+## Test Scenarios
 
-Home Page
-
-- Validate that I have 0 credits
-- Validate I can see my account info
-
-New Order Feature
-- Validate that User can not complete an order without instructions
-- Validate that all the paid plans are visible
-
-
+| Feature           | Scenario                                                                 |
+|-------------------|--------------------------------------------------------------------------|
+| **Login**         | Validate that a user can log in successfully                             |
+| **Login**         | Validate that a user can reset their password                            |
+| **Login**         | Validate that a user cannot register an account that already exists      |
+| **Home Page**     | Validate that the user has 0 credits                                     |
+| **Home Page**     | Validate that the user can see their account information                 |
+| **New Order**     | Validate that a user cannot complete an order without instructions       |
+| **New Order**     | Validate that all the paid plans are visible                             |

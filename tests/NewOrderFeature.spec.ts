@@ -1,7 +1,7 @@
 import { test, expect, chromium } from '@playwright/test';
 
 
-test('Validate that User can not complete an order without instructions', async ({ page }) => {
+test('Validate that a user cannot complete an order without instructions', async ({ page }) => {
   await page.goto('https://service.studycorgi.com/login');
   await page.getByPlaceholder('Email').click();
 

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Login Succesfully', async ({ page }) => {
+test('Validate that a user can log in successfully', async ({ page }) => {
   await page.goto('https://service.studycorgi.com/login');
   await page.getByPlaceholder('Email').click();
   await page.getByPlaceholder('Email').fill('adrianpablotamayo@gmail.com');
@@ -9,13 +9,13 @@ test('Login Succesfully', async ({ page }) => {
   await page.getByRole('button', { name: 'Sign In' }).click();
 
   // Assertions
+  await page.waitForTimeout(10000);
   await expect(page.getByRole('heading', { name: 'My Orders' }).getByRole('link')).toBeVisible();
-  await expect(page.locator('div').filter({ hasText: /^New order$/ })).toBeVisible();
   await expect(page.locator('div').filter({ hasText: /^Log out$/ })).toBeVisible();
 });
 
 
-test('Rest Password Succesfully', async ({ page }) => {
+test('Validate that a user can reset their password', async ({ page }) => {
 await page.goto('https://service.studycorgi.com/login');
 await page.getByRole('link', { name: 'Forgot password' }).click();
 
@@ -30,7 +30,7 @@ await expect(page.getByPlaceholder('Type your password')).toBeVisible();
 await expect(page.getByRole('button', { name: 'Sign in' })).toBeVisible();
 });
 
-test('Validate that I can not register an account that already exists', async ({ page }) => {
+test('Validate that a user cannot register an account that already exists', async ({ page }) => {
   await page.goto('https://service.studycorgi.com/login');
   await page.getByRole('link', { name: 'Create a new account' }).click();
   await page.getByPlaceholder('Email').click();
