@@ -1,3 +1,6 @@
+- PlayWright
+- Github Action CI/CD
+
 # StudyCorgi_Tests
 **** TestPlan
 
