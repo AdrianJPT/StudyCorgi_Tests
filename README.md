@@ -14,3 +14,6 @@
 | **Home Page**     | Validate that the user can see their account information                 |
 | **New Order**     | Validate that a user cannot complete an order without instructions       |
 | **New Order**     | Validate that all the paid plans are visible                             |
+
+
+***
