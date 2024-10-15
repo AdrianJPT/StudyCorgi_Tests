@@ -5,8 +5,7 @@ test('Validate that I have 0 credits', async ({ page }) => {
   await page.getByPlaceholder('Email').click();
   await page.getByPlaceholder('Email').fill('adrianpablotamayo@gmail.com');
   await page.getByPlaceholder('Email').press('Tab');
-  await page.getByPlaceholder('Type your password').fill('Test123456$');
+  await page.getByPlaceholder('Type your password').fill('ate6q3g7');
   await page.getByRole('button', { name: 'Sign In' }).click();
-  await page.goto('https://service.studycorgi.com/orders');
   await expect(page.locator('app-header-balance')).toContainText('$0.00');
 });

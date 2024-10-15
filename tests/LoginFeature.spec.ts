@@ -5,7 +5,7 @@ test('Login Succesfully', async ({ page }) => {
   await page.getByPlaceholder('Email').click();
   await page.getByPlaceholder('Email').fill('adrianpablotamayo@gmail.com');
   await page.getByPlaceholder('Type your password').click();
-  await page.getByPlaceholder('Type your password').fill('Test123456$');
+  await page.getByPlaceholder('Type your password').fill('ate6q3g7');
   await page.getByRole('button', { name: 'Sign In' }).click();
 
   // Assertions
@@ -20,7 +20,7 @@ await page.goto('https://service.studycorgi.com/login');
 await page.getByRole('link', { name: 'Forgot password' }).click();
 
 await page.getByPlaceholder('Email').click();
-await page.getByPlaceholder('Email').fill('adrianpablotamayo@gmail.com');
+await page.getByPlaceholder('Email').fill('testdatatemporal@gmail.com');
 await page.getByRole('button', { name: 'Send me the password' }).click();
 
 // Assertions
@@ -34,7 +34,7 @@ test('Validate that I can not register an account that already exists', async ({
   await page.goto('https://service.studycorgi.com/login');
   await page.getByRole('link', { name: 'Create a new account' }).click();
   await page.getByPlaceholder('Email').click();
-  await page.getByPlaceholder('Email').fill('testdatatemporal@gmail.com');
+  await page.getByPlaceholder('Email').fill('adrianpablotamayo@gmail.com');
   await page.getByPlaceholder('Type your password').click();
   await page.getByPlaceholder('Type your password').fill('Whatever123456');
   await page.getByLabel('I agree to terms and privacy').check();
